@@ -5,44 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Sesame Asie — Entrepreneurs, experts et aventuriers en Asie.">
   <title>Sesame Asie</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <style>
+<style>
+    @font-face{font-family:'playfairdisplay-bold';font-style:normal;font-weight:700;src:url('https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v13/UC3ZEjagJi85gF9qFaBgILxv9TIgpWQaRKdG-_MdlP0.woff2') format('woff2');font-display:swap}
+    @font-face{font-family:'playfair display';font-style:normal;font-weight:400;src:url('https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2') format('woff2');font-display:swap}
+    @font-face{font-family:'playfair display';font-style:normal;font-weight:700;src:url('https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lW4e5j5hNKc.woff2') format('woff2');font-display:swap}
+    @font-face{font-family:'din-next-w01-light';font-style:normal;font-weight:400;src:url('https://static.parastorage.com/fonts/v2/eca8b0cd-45d8-43cf-aee7-ca462bc5497c/v1/din-next-w01-light.woff2') format('woff2');font-display:swap}
+    @font-face{font-family:'avenir-lt-w01_35-light1475496';font-style:normal;font-weight:400;src:url('https://static.parastorage.com/fonts/v2/af36905f-3c92-4ef9-b0c1-f91432f16ac1/v1/avenir-lt-w01_35-light1475496.woff2') format('woff2');font-display:swap}
     :root{--violet:#6600ea;--ink:#000;--grey:#595959;--light:#e8e6e6;--white:#fff}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:#fff;color:var(--ink);font-family:"Avenir Next",Avenir,Helvetica,Arial,sans-serif;font-size:17px}
+    body{margin:0;background:#fff;color:var(--ink);font-family:'avenir-lt-w01_35-light1475496',Avenir,Helvetica,Arial,sans-serif;font-size:17px}
     a{color:inherit;text-decoration:none}.wrap{width:min(980px,calc(100% - 40px));margin:auto}
     header{border-bottom:1px solid #eee;background:#fff}.nav{min-height:104px;display:flex;align-items:center;justify-content:space-between;gap:30px}
-    .brand small{display:block;font-family:"DIN Next",Arial,sans-serif;font-size:11px;letter-spacing:1.5px;margin-bottom:7px}
-    .brand strong{font-family:"Playfair Display",Georgia,serif;font-size:31px}
-    nav{display:flex;gap:28px;align-items:center;font-family:"DIN Next",Arial,sans-serif;font-size:13px}
+    .brand small{display:block;font-family:'din-next-w01-light',Arial,sans-serif;font-size:11px;letter-spacing:1.5px;margin-bottom:7px}
+    .brand strong{font-family:'playfair display',Georgia,serif;font-size:31px}
+    nav{display:flex;gap:28px;align-items:center;font-family:'din-next-w01-light',Arial,sans-serif;font-size:13px}
     nav a:hover{color:var(--violet)}.subscribe{color:var(--violet);font-weight:700}
     .hero{padding:95px 0 84px;text-align:center;border-bottom:1px solid var(--light)}
-    .hero .kicker{font-family:"DIN Next",Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
-    h1{font:700 clamp(64px,10vw,116px)/.96 "Playfair Display",Georgia,serif;margin:0;letter-spacing:-3px}
-    .hero p{font-family:"Playfair Display",Georgia,serif;font-size:20px;line-height:1.55;max-width:720px;margin:28px auto 0;color:#222}
+    .hero .kicker{font-family:'din-next-w01-light',Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
+    h1{font:700 clamp(64px,10vw,116px)/.96 'playfairdisplay-bold','playfair display',Georgia,serif;margin:0;letter-spacing:-3px}
+    .hero p{font-family:'playfair display',Georgia,serif;font-size:20px;line-height:1.55;max-width:720px;margin:28px auto 0;color:#222}
     .hero .rule{width:55px;height:4px;background:var(--violet);margin:34px auto 0}
     section{padding:68px 0;border-bottom:1px solid var(--light)}
-    h2{font:700 38px/1.2 "Playfair Display",Georgia,serif;margin:0 0 12px}
+    h2{font:700 38px/1.2 'playfairdisplay-bold','playfair display',Georgia,serif;margin:0 0 12px}
     .section-intro{color:var(--grey);margin:0 0 30px;line-height:1.55}
-    .search{width:100%;border:1px solid #bbb;border-radius:0;padding:16px 18px;font:16px "Avenir Next",Avenir,Arial,sans-serif;outline:none}
+    .search{width:100%;border:1px solid #bbb;border-radius:0;padding:16px 18px;font:16px 'avenir-lt-w01_35-light1475496',Avenir,Arial,sans-serif;outline:none}
     .search:focus{border-color:var(--violet);box-shadow:0 0 0 1px var(--violet)}
     .filters{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0 32px}
-    .filter{background:#fff;border:1px solid #cfcfcf;padding:9px 13px;cursor:pointer;font:13px "DIN Next",Arial,sans-serif}
+    .filter{background:#fff;border:1px solid #cfcfcf;padding:9px 13px;cursor:pointer;font:13px 'din-next-w01-light',Arial,sans-serif}
     .filter:hover,.filter.active{border-color:var(--violet);color:var(--violet)}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 24px}
     .episode{display:block}.thumb{aspect-ratio:16/9;background:#f3f3f3;overflow:hidden;margin-bottom:14px;position:relative}
     .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}
     .episode:hover .thumb img{transform:scale(1.025)}
-    .placeholder{height:100%;display:flex;align-items:center;justify-content:center;border:1px solid #ddd;color:#888;font-family:"Playfair Display",Georgia,serif;font-size:24px}
-    .meta{font-family:"DIN Next",Arial,sans-serif;color:var(--violet);font-size:12px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:7px}
-    .episode h3{font:700 20px/1.25 "Playfair Display",Georgia,serif;margin:0}
+    .placeholder{height:100%;display:flex;align-items:center;justify-content:center;border:1px solid #ddd;color:#888;font-family:'playfair display',Georgia,serif;font-size:24px}
+    .meta{font-family:'din-next-w01-light',Arial,sans-serif;color:var(--violet);font-size:12px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:7px}
+    .episode h3{font:700 20px/1.25 'playfairdisplay-bold','playfair display',Georgia,serif;margin:0}
     .episode:hover h3{color:var(--violet)}
     .count{margin-top:22px;color:#777;font-size:13px}
     .about{max-width:760px}.about p{line-height:1.7;margin:0}
-    .platforms{display:flex;flex-wrap:wrap;gap:24px;font-family:"DIN Next",Arial,sans-serif}.platforms a{color:var(--violet)}
+    .platforms{display:flex;flex-wrap:wrap;gap:24px;font-family:'din-next-w01-light',Arial,sans-serif}.platforms a{color:var(--violet)}
     footer{padding:34px 0 48px;color:#666;font-size:13px}
     @media(max-width:800px){nav{display:none}.grid{grid-template-columns:repeat(2,1fr)}.hero{padding:70px 0 62px}}
     @media(max-width:540px){.wrap{width:calc(100% - 28px)}.grid{grid-template-columns:1fr}.hero{text-align:left}.hero p{margin-left:0}.hero .rule{margin-left:0}h1{font-size:64px}.nav{min-height:86px}}
@@ -52,7 +54,7 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="/"><small>ENTREPRENEURS, EXPERTS ET AVENTURIERS</small><strong>SESAME ASIE</strong></a>
-    <nav><a href="#episodes">TOUS LES EPISODES</a><a href="#apropos">A PROPOS</a><a href="https://www.patreon.com/" target="_blank">PATREON</a><a class="subscribe" href="#abonner">S'ABONNER 👌</a></nav>
+    <nav><a href="#episodes">TOUS LES EPISODES</a><a href="#apropos">A PROPOS</a><a class="subscribe" href="#abonner">S'ABONNER 👌</a></nav>
   </div>
 </header>
 <main>
@@ -61,6 +63,7 @@
       <div class="kicker">Entrepreneurs, experts et aventuriers</div>
       <h1>Sesame Asie</h1>
       <p>Des conversations avec celles et ceux qui entreprennent, innovent et construisent leur parcours en Asie.</p>
+      <p style="font-family:'avenir-lt-w01_35-light1475496',Avenir,Helvetica,Arial,sans-serif;font-size:15px;margin-top:18px">Un podcast créé et animé par <a href="https://www.linkedin.com/in/raphaelseghier/" target="_blank" rel="noopener" style="color:#6600ea">Raphaël Seghier ↗</a></p>
       <div class="rule"></div>
     </div>
   </div>
@@ -84,11 +87,11 @@
     </div>
   </section>
 
-  <section id="apropos"><div class="wrap about"><h2>À propos</h2><p>Sesame Asie donne la parole à des entrepreneurs, experts et aventuriers qui connaissent l'Asie par le terrain : parcours personnels, stratégies de marché, culture business, réussites, erreurs et rencontres.</p></div></section>
+  <section id="apropos"><div class="wrap about"><h2>À propos</h2><p>Sesame Asie donne la parole à des entrepreneurs, experts et aventuriers qui connaissent l'Asie par le terrain : parcours personnels, stratégies de marché, culture business, réussites, erreurs et rencontres.</p><p style="margin-top:18px">Le podcast est créé et animé par <a href="https://www.linkedin.com/in/raphaelseghier/" target="_blank" rel="noopener" style="color:#6600ea">Raphaël Seghier</a>. Pour me contacter, écrivez-moi directement sur <a href="https://www.linkedin.com/in/raphaelseghier/" target="_blank" rel="noopener" style="color:#6600ea">LinkedIn ↗</a>.</p></div></section>
 
-  <section id="abonner"><div class="wrap"><h2>Pour s'abonner</h2><div class="platforms"><a href="https://podcasts.apple.com/" target="_blank">Apple Podcast ↗</a><a href="https://open.spotify.com/" target="_blank">Spotify ↗</a><a href="https://www.youtube.com/" target="_blank">Youtube ↗</a><a href="https://smartlink.ausha.co/" target="_blank">Autres ↗</a></div></div></section>
+  <section id="abonner"><div class="wrap"><h2>Pour s'abonner</h2><div class="platforms"><a href="https://podcasts.apple.com/" target="_blank">Apple Podcast ↗</a><a href="https://open.spotify.com/" target="_blank">Spotify ↗</a><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube ↗</a></div></div></section>
 </main>
-<footer><div class="wrap">© 2026 Sesame Asie</div></footer>
+<footer><div class="wrap">© 2026 Sesame Asie · Un podcast de <a href="https://www.linkedin.com/in/raphaelseghier/" target="_blank" rel="noopener" style="color:#6600ea">Raphaël Seghier ↗</a></div></footer>
 
 <script>
 const I={
@@ -155,11 +158,39 @@ const E=[
 const grid=document.getElementById("grid"),search=document.getElementById("search"),count=document.getElementById("count");
 const filters=[...document.querySelectorAll(".filter")];let active="all";
 const norm=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+const imageCache=JSON.parse(localStorage.getItem("sesame-image-cache-v2")||"{}");
+
+async function loadEpisodeImage(num,page,holder){
+  if(I[num]||imageCache[num]) return;
+  try{
+    const res=await fetch(page,{cache:"force-cache"});
+    if(!res.ok) return;
+    const source=await res.text();
+    const doc=new DOMParser().parseFromString(source,"text/html");
+    const img=(doc.querySelector('meta[property="og:image"]')||{}).content ||
+              (doc.querySelector('meta[name="twitter:image"]')||{}).content;
+    if(!img) return;
+    imageCache[num]=img;
+    localStorage.setItem("sesame-image-cache-v2",JSON.stringify(imageCache));
+    if(holder && holder.isConnected){
+      holder.innerHTML='<img src="'+img+'" alt="" loading="lazy">';
+    }
+  }catch(e){}
+}
+
 function render(){
- const q=norm(search.value);
- const out=E.filter(e=>(!q||norm(e.join(" ")).includes(q))&&(active==="all"||norm(e[1]).includes(norm(active))));
- grid.innerHTML=out.map(e=>`<a class="episode" href="${e[3]}"><div class="thumb">${I[e[0]]?`<img src="${I[e[0]]}" alt="" loading="lazy">`:`<div class="placeholder">Episode #${e[0]}</div>`}</div><div class="meta">#${e[0]} · ${e[1]}</div><h3>${e[2]}</h3></a>`).join("");
- count.textContent=out.length+" épisode"+(out.length>1?"s":"")+" affiché"+(out.length>1?"s":"");
+  const q=norm(search.value);
+  const out=E.filter(e=>(!q||norm(e.join(" ")).includes(q))&&(active==="all"||norm(e[1]).includes(norm(active))));
+  grid.innerHTML=out.map(e=>{
+    const img=I[e[0]]||imageCache[e[0]];
+    const visual=img?'<img src="'+img+'" alt="" loading="lazy">':'<div class="placeholder">Episode #'+e[0]+'</div>';
+    return '<a class="episode" href="'+e[3]+'"><div class="thumb" data-num="'+e[0]+'" data-page="'+e[3]+'">'+visual+'</div><div class="meta">#'+e[0]+' · '+e[1]+'</div><h3>'+e[2]+'</h3></a>';
+  }).join("");
+  count.textContent=out.length+" épisode"+(out.length>1?"s":"")+" affiché"+(out.length>1?"s":"");
+  grid.querySelectorAll(".thumb[data-num]").forEach(holder=>{
+    const num=Number(holder.dataset.num);
+    if(!I[num]&&!imageCache[num]) loadEpisodeImage(num,holder.dataset.page,holder);
+  });
 }
 search.addEventListener("input",render);
 filters.forEach(b=>b.addEventListener("click",()=>{filters.forEach(x=>x.classList.remove("active"));b.classList.add("active");active=b.dataset.filter;render()}));
