@@ -3,290 +3,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sesame Asie — le podcast des entrepreneurs, experts et aventuriers qui construisent leur parcours en Asie.">
-  <title>Sesame Asie — Entrepreneurs, experts et aventuriers</title>
+  <meta name="description" content="Sesame Asie — Entrepreneurs, experts et aventuriers en Asie.">
+  <title>Sesame Asie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --ink:#111;
-      --paper:#f3efe6;
-      --blue:#abc8dc;
-      --red:#e85c43;
-      --white:#fff;
-      --line:rgba(17,17,17,.2);
-    }
+    :root{--violet:#6600ea;--ink:#000;--grey:#595959;--light:#e8e6e6;--white:#fff}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-    a{color:inherit;text-decoration:none}
-    .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
-    header{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--ink)}
-    .nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-    .brand{font-weight:900;font-size:27px;line-height:.9;letter-spacing:-1.5px}
-    .brand small{display:block;font-size:10px;letter-spacing:2px;margin-bottom:7px}
-    nav{display:flex;gap:26px;align-items:center;font-size:12px;font-weight:800;letter-spacing:.8px}
-    nav a:hover{opacity:.55}
-    .cta{background:var(--ink);color:white;padding:12px 15px}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;min-height:620px;border-bottom:1px solid var(--ink)}
-    .hero-copy{padding:80px 54px 70px 0;display:flex;flex-direction:column;justify-content:center}
-    .eyebrow{font-size:12px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;margin-bottom:28px}
-    h1{font-size:clamp(64px,8.5vw,122px);line-height:.8;letter-spacing:-6px;margin:0;font-weight:900}
-    h1 span{display:block;color:var(--red)}
-    .intro{font-size:20px;line-height:1.45;max-width:650px;margin:34px 0}
-    .actions{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{padding:14px 18px;border:1px solid var(--ink);font-size:13px;font-weight:800;display:inline-block}
-    .btn.primary{background:var(--ink);color:#fff}
-    .hero-art{background:var(--blue);border-left:1px solid var(--ink);position:relative;overflow:hidden;min-height:520px}
-    .cover-title{position:absolute;left:32px;top:34px;font-weight:900;font-size:78px;line-height:.78;letter-spacing:-5px;z-index:3}
-    .cover-title span{display:block}
-    .cover-quote{position:absolute;top:56px;right:30px;width:44%;text-align:right;font-size:24px;line-height:1.08;font-weight:800;z-index:3}
-    .sun{position:absolute;left:34%;bottom:-90px;width:270px;height:270px;border:34px solid rgba(255,255,255,.36);border-radius:50%}
-    .city{position:absolute;left:0;right:0;bottom:0;height:230px;display:flex;gap:7px;align-items:end;padding:0 18px}
-    .building{background:rgba(255,255,255,.9);border:1px solid rgba(17,17,17,.16);position:relative}
-    .building:after{content:"";position:absolute;left:20%;right:20%;top:14px;height:3px;background:rgba(17,17,17,.13);box-shadow:0 15px 0 rgba(17,17,17,.13),0 30px 0 rgba(17,17,17,.13),0 45px 0 rgba(17,17,17,.13)}
-    .b1{width:12%;height:54%}.b2{width:10%;height:79%}.b3{width:17%;height:45%}.b4{width:9%;height:90%}.b5{width:18%;height:66%}.b6{width:13%;height:76%}.b7{width:16%;height:52%}
-    section{padding:74px 0;border-bottom:1px solid var(--ink)}
-    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:32px}
-    .section-head h2{font-size:46px;line-height:.94;letter-spacing:-2px;margin:0}
-    .section-head p{margin:0;max-width:480px;line-height:1.5;color:#3e3e3e}
-    .featured{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
-    .card{background:#fff;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);display:flex;flex-direction:column;min-height:330px}
-    .visual{height:175px;background:var(--blue);position:relative;padding:20px;overflow:hidden}
-    .episode-no{font-size:60px;line-height:.8;font-weight:900;letter-spacing:-4px}
-    .place{position:absolute;right:18px;top:20px;font-weight:800;text-transform:uppercase;letter-spacing:1px;font-size:11px}
-    .visual:after{content:"SESAME\AASIE";white-space:pre;position:absolute;right:16px;bottom:14px;font-size:29px;line-height:.78;font-weight:900;text-align:right}
-    .card:hover .visual{background:var(--red)}
-    .body{padding:22px;display:flex;flex-direction:column;gap:9px}
-    .body strong{font-size:20px;line-height:1.15}
-    .body p{margin:0;line-height:1.45;color:#4b4b4b}
-    .search{width:100%;padding:15px 16px;border:1px solid var(--ink);background:transparent;font-size:16px;margin-bottom:18px}
-    .filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px}
-    .filter{border:1px solid var(--ink);background:transparent;padding:9px 12px;font-weight:700;cursor:pointer}
-    .filter.active,.filter:hover{background:var(--ink);color:#fff}
-    .episodes{border-top:1px solid var(--ink)}
-    .row{display:grid;grid-template-columns:90px 150px 1fr 30px;align-items:center;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
-    .row:hover{background:rgba(171,200,220,.28)}
-    .num{font-size:22px;font-weight:900}.loc{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px}.title{line-height:1.35}.arrow{text-align:right}
-    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}
-    .about-mark{font-size:84px;line-height:.78;letter-spacing:-5px;font-weight:900}
-    .about p{font-size:21px;line-height:1.5;margin:0}
-    .platforms{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink)}
-    .platforms a{padding:22px;text-align:center;font-weight:900;background:white;border-right:1px solid var(--ink)}
-    .platforms a:last-child{border-right:0}.platforms a:hover{background:var(--blue)}
-    footer{padding:34px 0 44px}
-    .footer-row{display:flex;justify-content:space-between;gap:20px;font-size:13px}.muted{opacity:.6}
-    @media(max-width:850px){
-      nav{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:60px 0 42px}.hero-art{border-left:0;border-top:1px solid var(--ink)}
-      .featured{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.platforms{grid-template-columns:1fr 1fr}
-      .episode-no{font-size:54px}.row{grid-template-columns:68px 1fr 24px}.loc{display:none}
-    }
-    @media(max-width:560px){
-      .wrap{width:min(100% - 24px,1180px)}.featured{grid-template-columns:1fr}
-      h1{letter-spacing:-4px}.cover-title{font-size:58px}.cover-quote{font-size:19px}
-      .section-head{display:block}.section-head p{margin-top:14px}.section-head h2{font-size:39px}
-      .platforms{grid-template-columns:1fr}.platforms a{border-right:0;border-bottom:1px solid var(--ink)}
-      .footer-row{flex-direction:column}
-    }
+    body{margin:0;background:#fff;color:var(--ink);font-family:"Avenir Next",Avenir,Helvetica,Arial,sans-serif;font-size:17px}
+    a{color:inherit;text-decoration:none}.wrap{width:min(980px,calc(100% - 40px));margin:auto}
+    header{border-bottom:1px solid #eee;background:#fff}.nav{min-height:104px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand small{display:block;font-family:"DIN Next",Arial,sans-serif;font-size:11px;letter-spacing:1.5px;margin-bottom:7px}
+    .brand strong{font-family:"Playfair Display",Georgia,serif;font-size:31px}
+    nav{display:flex;gap:28px;align-items:center;font-family:"DIN Next",Arial,sans-serif;font-size:13px}
+    nav a:hover{color:var(--violet)}.subscribe{color:var(--violet);font-weight:700}
+    .hero{padding:95px 0 84px;text-align:center;border-bottom:1px solid var(--light)}
+    .hero .kicker{font-family:"DIN Next",Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
+    h1{font:700 clamp(64px,10vw,116px)/.96 "Playfair Display",Georgia,serif;margin:0;letter-spacing:-3px}
+    .hero p{font-family:"Playfair Display",Georgia,serif;font-size:20px;line-height:1.55;max-width:720px;margin:28px auto 0;color:#222}
+    .hero .rule{width:55px;height:4px;background:var(--violet);margin:34px auto 0}
+    section{padding:68px 0;border-bottom:1px solid var(--light)}
+    h2{font:700 38px/1.2 "Playfair Display",Georgia,serif;margin:0 0 12px}
+    .section-intro{color:var(--grey);margin:0 0 30px;line-height:1.55}
+    .search{width:100%;border:1px solid #bbb;border-radius:0;padding:16px 18px;font:16px "Avenir Next",Avenir,Arial,sans-serif;outline:none}
+    .search:focus{border-color:var(--violet);box-shadow:0 0 0 1px var(--violet)}
+    .filters{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0 32px}
+    .filter{background:#fff;border:1px solid #cfcfcf;padding:9px 13px;cursor:pointer;font:13px "DIN Next",Arial,sans-serif}
+    .filter:hover,.filter.active{border-color:var(--violet);color:var(--violet)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 24px}
+    .episode{display:block}.thumb{aspect-ratio:16/9;background:#f3f3f3;overflow:hidden;margin-bottom:14px;position:relative}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}
+    .episode:hover .thumb img{transform:scale(1.025)}
+    .placeholder{height:100%;display:flex;align-items:center;justify-content:center;border:1px solid #ddd;color:#888;font-family:"Playfair Display",Georgia,serif;font-size:24px}
+    .meta{font-family:"DIN Next",Arial,sans-serif;color:var(--violet);font-size:12px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:7px}
+    .episode h3{font:700 20px/1.25 "Playfair Display",Georgia,serif;margin:0}
+    .episode:hover h3{color:var(--violet)}
+    .count{margin-top:22px;color:#777;font-size:13px}
+    .about{max-width:760px}.about p{line-height:1.7;margin:0}
+    .platforms{display:flex;flex-wrap:wrap;gap:24px;font-family:"DIN Next",Arial,sans-serif}.platforms a{color:var(--violet)}
+    footer{padding:34px 0 48px;color:#666;font-size:13px}
+    @media(max-width:800px){nav{display:none}.grid{grid-template-columns:repeat(2,1fr)}.hero{padding:70px 0 62px}}
+    @media(max-width:540px){.wrap{width:calc(100% - 28px)}.grid{grid-template-columns:1fr}.hero{text-align:left}.hero p{margin-left:0}.hero .rule{margin-left:0}h1{font-size:64px}.nav{min-height:86px}}
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="/">
-        <small>ENTREPRENEURS, EXPERTS ET AVENTURIERS</small>
-        SESAME ASIE
-      </a>
-      <nav>
-        <a href="#episodes">EPISODES</a>
-        <a href="#apropos">A PROPOS</a>
-        <a class="cta" href="#abonner">S'ABONNER</a>
-      </nav>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/"><small>ENTREPRENEURS, EXPERTS ET AVENTURIERS</small><strong>SESAME ASIE</strong></a>
+    <nav><a href="#episodes">TOUS LES EPISODES</a><a href="#apropos">A PROPOS</a><a href="https://www.patreon.com/" target="_blank">PATREON</a><a class="subscribe" href="#abonner">S'ABONNER 👌</a></nav>
+  </div>
+</header>
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="kicker">Entrepreneurs, experts et aventuriers</div>
+      <h1>Sesame Asie</h1>
+      <p>Des conversations avec celles et ceux qui entreprennent, innovent et construisent leur parcours en Asie.</p>
+      <div class="rule"></div>
     </div>
-  </header>
+  </div>
 
-  <main>
-    <div class="wrap hero">
-      <div class="hero-copy">
-        <div class="eyebrow">Le podcast francophone des parcours en Asie</div>
-        <h1>SESAME <span>ASIE</span></h1>
-        <p class="intro">Des conversations longues avec celles et ceux qui entreprennent, innovent, investissent et vivent l'Asie de l'intérieur — de Shanghai à Singapour, de Tokyo à Taipei.</p>
-        <div class="actions">
-          <a class="btn primary" href="#episodes">Découvrir les épisodes ↓</a>
-          <a class="btn" href="#abonner">S'abonner</a>
-        </div>
+  <section id="episodes">
+    <div class="wrap">
+      <h2>Tous les épisodes</h2>
+      <p class="section-intro">Recherchez un invité, une entreprise ou un pays. Les résultats et les vignettes s'actualisent instantanément.</p>
+      <input id="search" class="search" type="search" placeholder="Rechercher un épisode, un invité, une entreprise...">
+      <div class="filters">
+        <button class="filter active" data-filter="all">Tous</button>
+        <button class="filter" data-filter="hong kong">Hong Kong</button>
+        <button class="filter" data-filter="chine">Chine</button>
+        <button class="filter" data-filter="singapour">Singapour</button>
+        <button class="filter" data-filter="taiwan">Taiwan</button>
+        <button class="filter" data-filter="japon">Japon</button>
+        <button class="filter" data-filter="asie du sud est">Asie du Sud-Est</button>
       </div>
-      <div class="hero-art">
-        <div class="cover-title"><span>SESAME</span><span>ASIE</span></div>
-        <div class="cover-quote">« Des histoires de terrain, sans filtre. »</div>
-        <div class="sun"></div>
-        <div class="city">
-          <div class="building b1"></div><div class="building b2"></div><div class="building b3"></div>
-          <div class="building b4"></div><div class="building b5"></div><div class="building b6"></div><div class="building b7"></div>
-        </div>
-      </div>
+      <div id="grid" class="grid"></div>
+      <div id="count" class="count"></div>
     </div>
+  </section>
 
-    <section>
-      <div class="wrap">
-        <div class="section-head">
-          <h2>À écouter<br>en priorité</h2>
-          <p>Une sélection d'épisodes qui résume l'esprit Sesame Asie : entrepreneuriat, scale-ups, innovation, culture business et vies construites entre plusieurs marchés.</p>
-        </div>
-        <div class="featured">
-          <a class="card" href="59-singapour-pierre-poignant-branded-de-ceo-de-lazada-a-branded-acquisition-de-marques-amazon.html">
-            <div class="visual"><span class="episode-no">#59</span><span class="place">Singapour</span></div>
-            <div class="body"><strong>Pierre Poignant — Branded</strong><p>De CEO de Lazada à l'acquisition de marques Amazon.</p></div>
-          </a>
-          <a class="card" href="31-hong-kong-sonalie-figueiras-green-queen-devenir-le-cnn-de-la-sustainability.html">
-            <div class="visual"><span class="episode-no">#31</span><span class="place">Hong Kong</span></div>
-            <div class="body"><strong>Sonalie Figueiras — Green Queen</strong><p>Construire un média de référence autour de la sustainability.</p></div>
-          </a>
-          <a class="card" href="57-taiwan-pierre-arnaud-le-magnan-chiru-bikes-ultra-endurance-velos-pour-pedaler-20h-par-jour-e.html">
-            <div class="visual"><span class="episode-no">#57</span><span class="place">Taiwan</span></div>
-            <div class="body"><strong>Pierre-Arnaud Le Magnan — Chiru Bikes</strong><p>Ultra-endurance, produit et entrepreneuriat à Taiwan.</p></div>
-          </a>
-          <a class="card" href="25-beijing-pascal-gentil-dna-global-analytics-taekwondo-reconversion-tech.html">
-            <div class="visual"><span class="episode-no">#25</span><span class="place">Beijing</span></div>
-            <div class="body"><strong>Pascal Gentil — DNA Global Analytics</strong><p>Sport de haut niveau, reconversion et tech en Chine.</p></div>
-          </a>
-          <a class="card" href="56-hong-kong-aurelien-joly-unlock-apac-strategie-de-distribution-consummer-electronics-en-asie.html">
-            <div class="visual"><span class="episode-no">#56</span><span class="place">Hong Kong</span></div>
-            <div class="body"><strong>Aurélien Joly — Unlock APAC</strong><p>Stratégie de distribution consumer electronics en Asie.</p></div>
-          </a>
-          <a class="card" href="70-singapour-martin-pasquier-consultant-scale-ups-comment-attaquer-le-marche-apac.html">
-            <div class="visual"><span class="episode-no">#70</span><span class="place">Singapour</span></div>
-            <div class="body"><strong>Martin Pasquier — Scale-ups</strong><p>Comment attaquer le marché APAC.</p></div>
-          </a>
-        </div>
-      </div>
-    </section>
+  <section id="apropos"><div class="wrap about"><h2>À propos</h2><p>Sesame Asie donne la parole à des entrepreneurs, experts et aventuriers qui connaissent l'Asie par le terrain : parcours personnels, stratégies de marché, culture business, réussites, erreurs et rencontres.</p></div></section>
 
-    <section id="episodes">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Tous les épisodes</h2>
-          <p>Recherche par invité, entreprise ou pays. Chaque résultat renvoie vers la page épisode existante.</p>
-        </div>
-        <input id="search" class="search" type="search" placeholder="Rechercher : Taiwan, Lazada, sustainability, Shanghai...">
-        <div class="filters">
-          <button class="filter active" data-filter="all">Tous</button>
-          <button class="filter" data-filter="hong kong">Hong Kong</button>
-          <button class="filter" data-filter="chine">Chine</button>
-          <button class="filter" data-filter="singapour">Singapour</button>
-          <button class="filter" data-filter="taiwan">Taiwan</button>
-          <button class="filter" data-filter="japon">Japon</button>
-          <button class="filter" data-filter="asie du sud est">Asie du Sud-Est</button>
-        </div>
-        <div id="episodeList" class="episodes"></div>
-      </div>
-    </section>
+  <section id="abonner"><div class="wrap"><h2>Pour s'abonner</h2><div class="platforms"><a href="https://podcasts.apple.com/" target="_blank">Apple Podcast ↗</a><a href="https://open.spotify.com/" target="_blank">Spotify ↗</a><a href="https://www.youtube.com/" target="_blank">Youtube ↗</a><a href="https://smartlink.ausha.co/" target="_blank">Autres ↗</a></div></div></section>
+</main>
+<footer><div class="wrap">© 2026 Sesame Asie</div></footer>
 
-    <section id="apropos">
-      <div class="wrap about">
-        <div class="about-mark">ASIE<br>SANS<br>FILTRE.</div>
-        <p>Sesame Asie donne la parole à des entrepreneurs, experts, investisseurs et aventuriers qui connaissent l'Asie par le terrain. Des trajectoires personnelles, des erreurs, des rencontres, des stratégies de marché et des histoires qu'on entend rarement dans les formats business classiques.</p>
-      </div>
-    </section>
-
-    <section id="abonner">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Pour s'abonner</h2>
-          <p>Retrouvez Sesame Asie sur votre plateforme d'écoute préférée.</p>
-        </div>
-        <div class="platforms">
-          <a href="https://podcasts.apple.com/" target="_blank" rel="noreferrer">Apple Podcasts ↗</a>
-          <a href="https://open.spotify.com/" target="_blank" rel="noreferrer">Spotify ↗</a>
-          <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">YouTube ↗</a>
-          <a href="https://smartlink.ausha.co/" target="_blank" rel="noreferrer">Autres ↗</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap footer-row">
-      <div><strong>SESAME ASIE</strong><div class="muted">Entrepreneurs, experts et aventuriers.</div></div>
-      <div class="muted">© 2026 Sesame Asie</div>
-    </div>
-  </footer>
-
-  <script>
-    const episodes = [
-      [1,"Chine","Hacene Taibi","webpage.html"],
-      [2,"Asie","Benjamin Joffe","test-2.html"],
-      [3,"Chine","Fabien Marret — Monbento","3-fabien-marret-chairman-monbento-demarrer-a-clermont-ferrand-et-percer-sur-tmall.html"],
-      [5,"Hong Kong / Singapour","Adrien Barthel — Sleek","5-adrien-barthel-co-founder-sleek-ou-monter-sa-structure-en-asie-hong-kong-vs-singapour.html"],
-      [8,"Hong Kong","Pierre-Nicolas Disser — Qima","8-pierre-nicolas-disser-chief-commercial-officer-qima-13-ans-d-aventures-dans-le-qc.html"],
-      [9,"Hong Kong","Igor Duc — Native Union","9-igor-duc-ceo-native-union-creer-une-marque-premium-d-accessoires-tech.html"],
-      [10,"Hong Kong","Marie Kretz — Uplifters","10-hk-ong-aides-a-domicile-formation-marie-kretz-founder-ceo-uplifters.html"],
-      [14,"Hong Kong","Olivier Kuziner — Ekimetrics","14-hk-data-science-ai-levee-de-fonds-olivier-kuziner-gm-apac-ekimetrics.html"],
-      [17,"Chine","Jean-Baptiste Le Blan — Splio","17-chine-retail-digital-adaptation-jean-baptiste-le-blan-gm-apac-splio.html"],
-      [18,"Hong Kong","Albin Lix — Digital Business Lab","18-hong-kong-albin-lix-digital-business-lab-self-made-man-reseaux-sociaux-kol.html"],
-      [19,"Chine","Frédéric Guiral de Haas — Nivose 1933","19-shanghai-frederic-guiral-de-haas-nivose-1933-30-ans-de-chine-retail-re-lancer-une-marque.html"],
-      [20,"Hong Kong","Diego & Delphine — OnTheList","20-hong-kong-diego-et-delphine-on-the-list-flash-sales-retail-couple-entrepreneur.html"],
-      [21,"Chine","Aurélien Rigart — IT Consultis","21-shanghai-aurelien-rigart-it-consultis-agence-transformation-digitale-direct-to-consummer.html"],
-      [22,"Chine / Hong Kong","David Baverez","22-hk-chine-david-baverez-investisseur-essayiste-le-retour-de-la-chine-au-21eme-siecle.html"],
-      [25,"Chine","Pascal Gentil — DNA Global Analytics","25-beijing-pascal-gentil-dna-global-analytics-taekwondo-reconversion-tech.html"],
-      [28,"Hong Kong","Arnault Castel — Kapok","28-hong-kong-arnault-castel-kapok-concept-stores-distribution-de-marques.html"],
-      [29,"Japon","Pascal Gerbert-Gaillard — Bio c' Bon","29-tokyo-pascal-gerbert-gaillard-bio-c-bon-une-jv-avec-le-groupe-aeon-pour-developper-le-bio-au.html"],
-      [31,"Hong Kong","Sonalie Figueiras — Green Queen","31-hong-kong-sonalie-figueiras-green-queen-devenir-le-cnn-de-la-sustainability.html"],
-      [32,"Asie du Sud Est","Benjamin Croc — BrioHR","32-malaisie-benjamin-croc-briohr-une-hr-tech-a-kuala-qui-integre-y-combinator.html"],
-      [36,"Chine","Sandrine Zerbib — Full Jet","36-shanghai-sandrine-zerbib-full-jet-ouvrir-4000-magasins-adidas-rachat-full-jet-par-baozun.html"],
-      [37,"Chine","Yassine Regragui — Fintech Chine","37-chine-yassine-regragui-fintech-chine-travailler-chez-alibaba-alipay-l-affaire-ant-ipo.html"],
-      [39,"Japon","Frédéric Nouel — 3rdKind","39-tokyo-frederic-nouel-3rdkind-inc-jeux-video-mobile-culture-du-business-au-japon.html"],
-      [41,"Japon","Taisuke Alex Odajima — EDGEof","41-tokyo-taisuke-alex-odajima-edgeof-innovation-marche-japonais-startups-interculturel.html"],
-      [42,"Singapour","Thibaut Brière","42-singapour-thibaut-briere-growth-marketing-studio-ecosysteme-tech-de-singapour.html"],
-      [45,"Taiwan","Pascal Viaud — Ubik","45-taiwan-pascal-viaud-ubik-semi-conducteurs-taiwan-tscm.html"],
-      [48,"Taiwan","Philippe Chiu — UnaBiz","48-taiwan-philippe-chiu-unabiz-permettre-a-l-iot-de-sortir-du-cimetiere-des-proof-of-concept.html"],
-      [49,"Asie du Sud Est","Djoann Fal — GetLinks","49-bangkok-djoann-fal-getlinks-monter-getlinks-a-22-ans-en-thailande-lever-des-fonds-d-alibaba.html"],
-      [50,"Taiwan","Thomas Kuiper — Gandi","50-taiwan-thomas-kuiper-gandi-no-bullshit-communication-business-development-strategy.html"],
-      [53,"Singapour","Alice Besomi — Jungle Ventures","53-singapour-alice-besomi-jungle-venture-startup-lever-des-fonds-et-developper-l-asie-du-sud-est.html"],
-      [54,"Taiwan","Keesjan Engelen — Titoma","54-taiwan-keesjan-engelen-titoma-electronics-design-manufacturing-in-asia.html"],
-      [56,"Hong Kong","Aurélien Joly — Unlock APAC","56-hong-kong-aurelien-joly-unlock-apac-strategie-de-distribution-consummer-electronics-en-asie.html"],
-      [57,"Taiwan","Pierre-Arnaud Le Magnan — Chiru Bikes","57-taiwan-pierre-arnaud-le-magnan-chiru-bikes-ultra-endurance-velos-pour-pedaler-20h-par-jour-e.html"],
-      [59,"Singapour","Pierre Poignant — Branded","59-singapour-pierre-poignant-branded-de-ceo-de-lazada-a-branded-acquisition-de-marques-amazon.html"],
-      [60,"Chine","Augustin Missoffe — HOPSCOTCH","60-shanghai-augustin-missoffe-hopscotch-la-chine-pense-en-ecosystemes-pas-en-innovation-unique.html"],
-      [61,"Hong Kong","Augustin Redier — Red Asia Insurance","61-hong-kong-augustin-redier-red-asia-insurance-assurances-11-ans-entre-shanghai-et-hk.html"],
-      [63,"Asie du Sud Est","Stephanie Desmas — White Palm Hotel","63-indonesie-stephanie-desmas-white-palm-hotel-bali-de-la-vente-de-jets-prives-a-un-hotel-a-bali.html"],
-      [64,"Hong Kong","Cyrille Littler — Eastwise","64-hong-kong-cyrille-littler-eastwise-s-installer-a-hk-racheter-une-entreprise-de-sourcing.html"],
-      [65,"Asie du Sud Est","Nathanael Noiraud","65-malaisie-nathanael-noiraud-n-strategy-consulting-go-to-market-entreprises-tech-en-apac.html"],
-      [67,"Asie du Sud Est","Soreasmey Ke Bin — Confluences","67-cambodge-soreasmey-ke-bin-confluences-etre-sur-de-soi-mais-savoir-adapter-son-offre.html"],
-      [68,"Singapour","Daniel Rouquette — Villa Finders","68-singapore-daniel-rouquette-villa-finders-monter-le-airbnb-de-la-location-de-villas-en-apac.html"],
-      [70,"Singapour","Martin Pasquier","70-singapour-martin-pasquier-consultant-scale-ups-comment-attaquer-le-marche-apac.html"],
-      [71,"Singapour","Thibaut Meurgue Guyard — Fresque du Climat","71-singapour-thibaut-meurgue-guyard-country-coordinator-la-fresque-du-climat-en-asie.html"],
-      [72,"Taiwan","Pascal Thien Ah Koon","72-taiwan-pascal-thien-ah-koon-avocat-faire-profil-bas-s-integrer-laisser-venir.html"]
-    ];
-
-    const list = document.getElementById('episodeList');
-    const search = document.getElementById('search');
-    const filters = [...document.querySelectorAll('.filter')];
-    let activeFilter = 'all';
-    const normalise = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-
-    function render(){
-      const q = normalise(search.value);
-      const rows = episodes.filter(ep => {
-        const haystack = normalise(ep.join(' '));
-        return (!q || haystack.includes(q)) &&
-          (activeFilter === 'all' || normalise(ep[1]).includes(normalise(activeFilter)));
-      }).map(ep => `
-        <a class="row" href="${ep[3]}">
-          <div class="num">#${ep[0]}</div>
-          <div class="loc">${ep[1]}</div>
-          <div class="title">${ep[2]}</div>
-          <div class="arrow">↗</div>
-        </a>`).join('');
-      list.innerHTML = rows || '<div style="padding:24px 0">Aucun épisode ne correspond à cette recherche.</div>';
-    }
-
-    search.addEventListener('input', render);
-    filters.forEach(btn => btn.addEventListener('click', () => {
-      filters.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeFilter = btn.dataset.filter;
-      render();
-    }));
-    render();
-  </script>
+<script>
+const I={
+59:"https://static.wixstatic.com/media/e915a3_0029190da7984ceca053c4bbcf2fd4df~mv2.jpg/v1/fill/w_888,h_499,al_c,lg_1,q_85/e915a3_0029190da7984ceca053c4bbcf2fd4df~mv2.jpg",
+31:"https://static.wixstatic.com/media/e915a3_490332fa2cd14e81b65b0f8db9b651cd~mv2.jpg/v1/fill/w_888,h_508,al_c,lg_1,q_85/e915a3_490332fa2cd14e81b65b0f8db9b651cd~mv2.jpg",
+57:"https://static.wixstatic.com/media/e915a3_621f7a7bd40c4a699bf9d77ed02c68cf~mv2.jpg/v1/fill/w_888,h_499,al_c,lg_1,q_85/e915a3_621f7a7bd40c4a699bf9d77ed02c68cf~mv2.jpg",
+25:"https://static.wixstatic.com/media/e915a3_b3bd9f69a5ff4d4eaf64a407108cc61a~mv2.jpg/v1/fill/w_888,h_508,al_c,lg_1,q_85/e915a3_b3bd9f69a5ff4d4eaf64a407108cc61a~mv2.jpg",
+56:"https://static.wixstatic.com/media/e915a3_75a5f7b998be4fc1848cdc144a770e54~mv2.jpg/v1/fill/w_888,h_499,al_c,lg_1,q_85/e915a3_75a5f7b998be4fc1848cdc144a770e54~mv2.jpg",
+70:"https://static.wixstatic.com/media/e915a3_791f53daf981405d8b11925ae1a4ac7f~mv2.png/v1/fill/w_888,h_499,al_c,lg_1,q_90/e915a3_791f53daf981405d8b11925ae1a4ac7f~mv2.png",
+71:"https://static.wixstatic.com/media/e915a3_f6614c22704a47f98950a712a09ede27~mv2.jpg/v1/fill/w_888,h_499,al_c,lg_1,q_85/e915a3_f6614c22704a47f98950a712a09ede27~mv2.jpg",
+68:"https://static.wixstatic.com/media/e915a3_0ba614153e9647238c2794a953a17706~mv2.jpg/v1/fill/w_888,h_499,al_c,lg_1,q_85/e915a3_0ba614153e9647238c2794a953a17706~mv2.jpg",
+67:"https://static.wixstatic.com/media/e915a3_15e0733b1f67457abff0aa4e774ea96b~mv2.png/v1/fill/w_888,h_499,al_c,lg_1,q_90/e915a3_15e0733b1f67457abff0aa4e774ea96b~mv2.png",
+65:"https://static.wixstatic.com/media/e915a3_7c99486fe5234e5b8d8db5a7cf2f49ea~mv2.jpg/v1/fill/w_888,h_499,al_c,lg_1,q_85/e915a3_7c99486fe5234e5b8d8db5a7cf2f49ea~mv2.jpg",
+64:"https://static.wixstatic.com/media/e915a3_6abb0803e1bb4e78951990efee0b2b16~mv2.jpg/v1/fill/w_888,h_499,al_c,lg_1,q_85/e915a3_6abb0803e1bb4e78951990efee0b2b16~mv2.jpg",
+63:"https://static.wixstatic.com/media/e915a3_b283c8dcb6a947b8bf3e2c7cec5ed004~mv2.jpg/v1/fill/w_888,h_499,al_c,lg_1,q_85/e915a3_b283c8dcb6a947b8bf3e2c7cec5ed004~mv2.jpg",
+61:"https://static.wixstatic.com/media/e915a3_98b8d7a34d6740f18e8ef143f8ea2943~mv2.jpg/v1/fill/w_888,h_499,al_c,lg_1,q_85/e915a3_98b8d7a34d6740f18e8ef143f8ea2943~mv2.jpg",
+60:"https://static.wixstatic.com/media/e915a3_6511f5ed58914114b854e28b4bd1982d~mv2.jpg/v1/fill/w_888,h_499,al_c,lg_1,q_85/e915a3_6511f5ed58914114b854e28b4bd1982d~mv2.jpg"
+};
+const E=[
+[1,"Chine","Hacene Taibi — CEO Bistrochat","webpage.html"],
+[2,"Asie","Benjamin Joffe","test-2.html"],
+[3,"Chine","Fabien Marret — Monbento","3-fabien-marret-chairman-monbento-demarrer-a-clermont-ferrand-et-percer-sur-tmall.html"],
+[5,"Hong Kong / Singapour","Adrien Barthel — Sleek","5-adrien-barthel-co-founder-sleek-ou-monter-sa-structure-en-asie-hong-kong-vs-singapour.html"],
+[8,"Hong Kong","Pierre-Nicolas Disser — Qima","8-pierre-nicolas-disser-chief-commercial-officer-qima-13-ans-d-aventures-dans-le-qc.html"],
+[9,"Hong Kong","Igor Duc — Native Union","9-igor-duc-ceo-native-union-creer-une-marque-premium-d-accessoires-tech.html"],
+[10,"Hong Kong","Marie Kretz — Uplifters","10-hk-ong-aides-a-domicile-formation-marie-kretz-founder-ceo-uplifters.html"],
+[14,"Hong Kong","Olivier Kuziner — Ekimetrics","14-hk-data-science-ai-levee-de-fonds-olivier-kuziner-gm-apac-ekimetrics.html"],
+[17,"Chine","Jean-Baptiste Le Blan — Splio","17-chine-retail-digital-adaptation-jean-baptiste-le-blan-gm-apac-splio.html"],
+[18,"Hong Kong","Albin Lix — Digital Business Lab","18-hong-kong-albin-lix-digital-business-lab-self-made-man-reseaux-sociaux-kol.html"],
+[19,"Chine","Frédéric Guiral de Haas — Nivose 1933","19-shanghai-frederic-guiral-de-haas-nivose-1933-30-ans-de-chine-retail-re-lancer-une-marque.html"],
+[20,"Hong Kong","Diego & Delphine — OnTheList","20-hong-kong-diego-et-delphine-on-the-list-flash-sales-retail-couple-entrepreneur.html"],
+[21,"Chine","Aurélien Rigart — IT Consultis","21-shanghai-aurelien-rigart-it-consultis-agence-transformation-digitale-direct-to-consummer.html"],
+[22,"Chine / Hong Kong","David Baverez","22-hk-chine-david-baverez-investisseur-essayiste-le-retour-de-la-chine-au-21eme-siecle.html"],
+[25,"Chine","Pascal Gentil — DNA Global Analytics","25-beijing-pascal-gentil-dna-global-analytics-taekwondo-reconversion-tech.html"],
+[28,"Hong Kong","Arnault Castel — Kapok","28-hong-kong-arnault-castel-kapok-concept-stores-distribution-de-marques.html"],
+[29,"Japon","Pascal Gerbert-Gaillard — Bio c' Bon","29-tokyo-pascal-gerbert-gaillard-bio-c-bon-une-jv-avec-le-groupe-aeon-pour-developper-le-bio-au.html"],
+[31,"Hong Kong","Sonalie Figueiras — Green Queen","31-hong-kong-sonalie-figueiras-green-queen-devenir-le-cnn-de-la-sustainability.html"],
+[32,"Asie du Sud Est","Benjamin Croc — BrioHR","32-malaisie-benjamin-croc-briohr-une-hr-tech-a-kuala-qui-integre-y-combinator.html"],
+[36,"Chine","Sandrine Zerbib — Full Jet","36-shanghai-sandrine-zerbib-full-jet-ouvrir-4000-magasins-adidas-rachat-full-jet-par-baozun.html"],
+[37,"Chine","Yassine Regragui — Fintech Chine","37-chine-yassine-regragui-fintech-chine-travailler-chez-alibaba-alipay-l-affaire-ant-ipo.html"],
+[39,"Japon","Frédéric Nouel — 3rdKind","39-tokyo-frederic-nouel-3rdkind-inc-jeux-video-mobile-culture-du-business-au-japon.html"],
+[41,"Japon","Taisuke Alex Odajima — EDGEof","41-tokyo-taisuke-alex-odajima-edgeof-innovation-marche-japonais-startups-interculturel.html"],
+[42,"Singapour","Thibaut Brière","42-singapour-thibaut-briere-growth-marketing-studio-ecosysteme-tech-de-singapour.html"],
+[45,"Taiwan","Pascal Viaud — Ubik","45-taiwan-pascal-viaud-ubik-semi-conducteurs-taiwan-tscm.html"],
+[48,"Taiwan","Philippe Chiu — UnaBiz","48-taiwan-philippe-chiu-unabiz-permettre-a-l-iot-de-sortir-du-cimetiere-des-proof-of-concept.html"],
+[49,"Asie du Sud Est","Djoann Fal — GetLinks","49-bangkok-djoann-fal-getlinks-monter-getlinks-a-22-ans-en-thailande-lever-des-fonds-d-alibaba.html"],
+[50,"Taiwan","Thomas Kuiper — Gandi","50-taiwan-thomas-kuiper-gandi-no-bullshit-communication-business-development-strategy.html"],
+[53,"Singapour","Alice Besomi — Jungle Ventures","53-singapour-alice-besomi-jungle-venture-startup-lever-des-fonds-et-developper-l-asie-du-sud-est.html"],
+[54,"Taiwan","Keesjan Engelen — Titoma","54-taiwan-keesjan-engelen-titoma-electronics-design-manufacturing-in-asia.html"],
+[56,"Hong Kong","Aurélien Joly — Unlock APAC","56-hong-kong-aurelien-joly-unlock-apac-strategie-de-distribution-consummer-electronics-en-asie.html"],
+[57,"Taiwan","Pierre-Arnaud Le Magnan — Chiru Bikes","57-taiwan-pierre-arnaud-le-magnan-chiru-bikes-ultra-endurance-velos-pour-pedaler-20h-par-jour-e.html"],
+[59,"Singapour","Pierre Poignant — Branded","59-singapour-pierre-poignant-branded-de-ceo-de-lazada-a-branded-acquisition-de-marques-amazon.html"],
+[60,"Chine","Augustin Missoffe — HOPSCOTCH","60-shanghai-augustin-missoffe-hopscotch-la-chine-pense-en-ecosystemes-pas-en-innovation-unique.html"],
+[61,"Hong Kong","Augustin Redier — Red Asia Insurance","61-hong-kong-augustin-redier-red-asia-insurance-assurances-11-ans-entre-shanghai-et-hk.html"],
+[63,"Asie du Sud Est","Stephanie Desmas — White Palm Hotel","63-indonesie-stephanie-desmas-white-palm-hotel-bali-de-la-vente-de-jets-prives-a-un-hotel-a-bali.html"],
+[64,"Hong Kong","Cyrille Littler — Eastwise","64-hong-kong-cyrille-littler-eastwise-s-installer-a-hk-racheter-une-entreprise-de-sourcing.html"],
+[65,"Asie du Sud Est","Nathanael Noiraud","65-malaisie-nathanael-noiraud-n-strategy-consulting-go-to-market-entreprises-tech-en-apac.html"],
+[67,"Asie du Sud Est","Soreasmey Ke Bin — Confluences","67-cambodge-soreasmey-ke-bin-confluences-etre-sur-de-soi-mais-savoir-adapter-son-offre.html"],
+[68,"Singapour","Daniel Rouquette — Villa Finders","68-singapore-daniel-rouquette-villa-finders-monter-le-airbnb-de-la-location-de-villas-en-apac.html"],
+[70,"Singapour","Martin Pasquier","70-singapour-martin-pasquier-consultant-scale-ups-comment-attaquer-le-marche-apac.html"],
+[71,"Singapour","Thibaut Meurgue Guyard — Fresque du Climat","71-singapour-thibaut-meurgue-guyard-country-coordinator-la-fresque-du-climat-en-asie.html"],
+[72,"Taiwan","Pascal Thien Ah Koon","72-taiwan-pascal-thien-ah-koon-avocat-faire-profil-bas-s-integrer-laisser-venir.html"]
+].sort((a,b)=>b[0]-a[0]);
+const grid=document.getElementById("grid"),search=document.getElementById("search"),count=document.getElementById("count");
+const filters=[...document.querySelectorAll(".filter")];let active="all";
+const norm=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+function render(){
+ const q=norm(search.value);
+ const out=E.filter(e=>(!q||norm(e.join(" ")).includes(q))&&(active==="all"||norm(e[1]).includes(norm(active))));
+ grid.innerHTML=out.map(e=>`<a class="episode" href="${e[3]}"><div class="thumb">${I[e[0]]?`<img src="${I[e[0]]}" alt="" loading="lazy">`:`<div class="placeholder">Episode #${e[0]}</div>`}</div><div class="meta">#${e[0]} · ${e[1]}</div><h3>${e[2]}</h3></a>`).join("");
+ count.textContent=out.length+" épisode"+(out.length>1?"s":"")+" affiché"+(out.length>1?"s":"");
+}
+search.addEventListener("input",render);
+filters.forEach(b=>b.addEventListener("click",()=>{filters.forEach(x=>x.classList.remove("active"));b.classList.add("active");active=b.dataset.filter;render()}));
+render();
+</script>
 </body>
 </html>
