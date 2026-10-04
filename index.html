@@ -21,11 +21,17 @@
     .brand strong{font-family:'playfair display',Georgia,serif;font-size:31px}
     nav{display:flex;gap:28px;align-items:center;font-family:'din-next-w01-light',Arial,sans-serif;font-size:13px}
     nav a:hover{color:var(--violet)}.subscribe{color:var(--violet);font-weight:700}
-    .hero{padding:95px 0 84px;text-align:center;border-bottom:1px solid var(--light)}
-    .hero .kicker{font-family:'din-next-w01-light',Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
-    h1{font:700 clamp(64px,10vw,116px)/.96 'playfairdisplay-bold','playfair display',Georgia,serif;margin:0;letter-spacing:-3px}
-    .hero p{font-family:'playfair display',Georgia,serif;font-size:20px;line-height:1.55;max-width:720px;margin:28px auto 0;color:#222}
-    .hero .rule{width:55px;height:4px;background:var(--violet);margin:34px auto 0}
+    .hero{padding:88px 0 70px;text-align:center;border-bottom:1px solid var(--light)}
+    .hero .kicker{font-family:'din-next-w01-light',Arial,sans-serif;font-size:12px;letter-spacing:2.2px;text-transform:uppercase;margin-bottom:20px;color:#595959}
+    .hero h1{font:700 clamp(44px,6vw,72px)/1.03 'playfairdisplay-bold','playfair display',Georgia,serif;margin:0 auto;letter-spacing:-2px;max-width:860px}
+    .hero .lead{font-family:'playfair display',Georgia,serif;font-size:21px;line-height:1.55;max-width:700px;margin:24px auto 0;color:#222}
+    .hero .byline{font-family:'avenir-lt-w01_35-light1475496',Avenir,Helvetica,Arial,sans-serif;font-size:15px;margin:16px auto 0;color:#595959}
+    .listen-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:30px auto 0}
+    .listen-link{display:inline-flex;align-items:center;gap:9px;border:1px solid #d8d8d8;padding:11px 15px;font-family:'din-next-w01-light',Arial,sans-serif;font-size:13px;background:#fff;transition:.2s}
+    .listen-link:hover{border-color:var(--violet);color:var(--violet)}
+    .listen-link svg{width:20px;height:20px;display:block;fill:currentColor}
+    .episodes-cta{display:inline-flex;align-items:center;gap:10px;margin-top:34px;color:var(--violet);font-family:'din-next-w01-light',Arial,sans-serif;font-size:14px;border-bottom:1px solid var(--violet);padding-bottom:4px}
+    .episodes-cta:hover{opacity:.7}
     section{padding:68px 0;border-bottom:1px solid var(--light)}
     h2{font:700 38px/1.2 'playfairdisplay-bold','playfair display',Georgia,serif;margin:0 0 12px}
     .section-intro{color:var(--grey);margin:0 0 30px;line-height:1.55}
@@ -48,7 +54,7 @@
     .platforms{display:flex;flex-wrap:wrap;gap:24px;font-family:'din-next-w01-light',Arial,sans-serif}.platforms a{color:var(--violet)}
     footer{padding:34px 0 48px;color:#666;font-size:13px}
     @media(max-width:800px){nav{display:none}.grid{grid-template-columns:repeat(2,1fr)}.hero{padding:70px 0 62px}}
-    @media(max-width:540px){.wrap{width:calc(100% - 28px)}.grid{grid-template-columns:1fr}.hero{text-align:left}.hero p{margin-left:0}.hero .rule{margin-left:0}h1{font-size:64px}.nav{min-height:86px}}
+    @media(max-width:540px){.wrap{width:calc(100% - 28px)}.grid{grid-template-columns:1fr}.hero{text-align:left;padding:58px 0 48px}.hero h1{font-size:44px;letter-spacing:-1px}.hero .lead,.hero .byline{margin-left:0}.listen-links{justify-content:flex-start}.nav{min-height:86px}}
   </style>
 </head>
 <body>
@@ -61,11 +67,27 @@
 <main>
   <div class="hero">
     <div class="wrap">
-      <div class="kicker">Entrepreneurs, experts et aventuriers</div>
-      <h1>Sesame Asie</h1>
-      <p>Des conversations avec celles et ceux qui entreprennent, innovent et construisent leur parcours en Asie.</p>
-      <p style="font-family:'avenir-lt-w01_35-light1475496',Avenir,Helvetica,Arial,sans-serif;font-size:15px;margin-top:18px">Un podcast créé et animé par <a href="https://www.linkedin.com/in/raphaelseghier/" target="_blank" rel="noopener" style="color:#6600ea">Raphaël Seghier ↗</a></p>
-      <div class="rule"></div>
+      <div class="kicker">Sesame Asie · Le podcast</div>
+      <h1>Entreprendre, travailler et vivre en Asie — raconté par ceux qui le font.</h1>
+      <p class="lead">Des conversations de terrain avec des entrepreneurs, experts et aventuriers de Hong Kong à Tokyo, de Shanghai à Singapour.</p>
+      <p class="byline">Créé et animé par <a href="https://www.linkedin.com/in/raphaelseghier/" target="_blank" rel="noopener" style="color:#6600ea">Raphaël Seghier ↗</a></p>
+
+      <div class="listen-links" aria-label="Écouter Sesame Asie">
+        <a class="listen-link" href="https://podcasts.apple.com/hk/podcast/sesame-asie/id1497555928" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.2"/><path d="M9.2 15.2c.5-1.7 1.5-2.6 2.8-2.6s2.3.9 2.8 2.6l-.8 4.1h-4z"/><path d="M7.2 13.4a6 6 0 1 1 9.6 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          Apple Podcasts
+        </a>
+        <a class="listen-link" href="https://open.spotify.com/show/6SjRJEt9JtoVaQ4BNOjRL6" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M6.9 9.2c3.7-1.1 7.9-.8 11.1.8M7.6 12.4c3.1-.8 6.7-.5 9.5.8M8.2 15.2c2.6-.6 5.6-.3 7.9.7" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Spotify
+        </a>
+        <a class="listen-link" href="https://www.youtube.com/channel/UCRQSaQ5tb7NQclmkFc6e7Jw" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 7.2a2.8 2.8 0 0 0-2-2C17.2 4.7 12 4.7 12 4.7s-5.2 0-7 .5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2.5 12 29 29 0 0 0 3 16.8a2.8 2.8 0 0 0 2 2c1.8.5 7 .5 7 .5s5.2 0 7-.5a2.8 2.8 0 0 0 2-2 29 29 0 0 0 .5-4.8 29 29 0 0 0-.5-4.8Z"/><path d="m10 15.2 5-3.2-5-3.2z" fill="#fff"/></svg>
+          YouTube
+        </a>
+      </div>
+
+      <a class="episodes-cta" href="#episodes">Explorer les 69 épisodes <span>↓</span></a>
     </div>
   </div>
 
@@ -90,7 +112,7 @@
 
   <section id="apropos"><div class="wrap about"><h2>À propos</h2><p>Sesame Asie donne la parole à des entrepreneurs, experts et aventuriers qui connaissent l'Asie par le terrain : parcours personnels, stratégies de marché, culture business, réussites, erreurs et rencontres.</p><p style="margin-top:18px">Le podcast est créé et animé par <a href="https://www.linkedin.com/in/raphaelseghier/" target="_blank" rel="noopener" style="color:#6600ea">Raphaël Seghier</a>. Pour me contacter, écrivez-moi directement sur <a href="https://www.linkedin.com/in/raphaelseghier/" target="_blank" rel="noopener" style="color:#6600ea">LinkedIn ↗</a>.</p></div></section>
 
-  <section id="abonner"><div class="wrap"><h2>Pour s'abonner</h2><div class="platforms"><a href="https://podcasts.apple.com/" target="_blank">Apple Podcast ↗</a><a href="https://open.spotify.com/" target="_blank">Spotify ↗</a><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube ↗</a></div></div></section>
+  <section id="abonner"><div class="wrap"><h2>Pour s'abonner</h2><div class="platforms"><a href="https://podcasts.apple.com/hk/podcast/sesame-asie/id1497555928" target="_blank">Apple Podcast ↗</a><a href="https://open.spotify.com/show/6SjRJEt9JtoVaQ4BNOjRL6" target="_blank">Spotify ↗</a><a href="https://www.youtube.com/channel/UCRQSaQ5tb7NQclmkFc6e7Jw" target="_blank" rel="noopener">YouTube ↗</a></div></div></section>
 </main>
 <footer><div class="wrap">© 2026 Sesame Asie · Un podcast de <a href="https://www.linkedin.com/in/raphaelseghier/" target="_blank" rel="noopener" style="color:#6600ea">Raphaël Seghier ↗</a></div></footer>
 
@@ -116,40 +138,66 @@ const E=[
 [2,"Asie","Benjamin Joffe","SOSV","test-2.html"],
 [3,"Chine","Fabien Marret","Monbento","3-fabien-marret-chairman-monbento-demarrer-a-clermont-ferrand-et-percer-sur-tmall.html"],
 [5,"Hong Kong / Singapour","Adrien Barthel","Sleek","5-adrien-barthel-co-founder-sleek-ou-monter-sa-structure-en-asie-hong-kong-vs-singapour.html"],
+[6,"Asie","Pierre Lubin","Fairman","6-pierre-lubin-co-founder-fairman-granada-de-la-societe-de-conseil-aux-banques-aux-fintechs.html"],
+[7,"Asie","Clément Dumont","Asia Sport Connection","7-clement-dumont-director-asia-sport-connection.html"],
 [8,"Hong Kong","Pierre-Nicolas Disser","Qima","8-pierre-nicolas-disser-chief-commercial-officer-qima-13-ans-d-aventures-dans-le-qc.html"],
 [9,"Hong Kong","Igor Duc","Native Union","9-igor-duc-ceo-native-union-creer-une-marque-premium-d-accessoires-tech.html"],
 [10,"Hong Kong","Marie Kretz","Uplifters","10-hk-ong-aides-a-domicile-formation-marie-kretz-founder-ceo-uplifters.html"],
+[11,"Hong Kong","Vivian Meriguet","Wild Solutions","11-hk-agence-digitale-seo-business-development-vivian-meriguet-co-founder-wild-solutions.html"],
+[12,"Hong Kong","Julien Loïc Garin","Le Cercle / French May","12-hk-arts-french-may-evenementiel-julien-loic-garin-ceo-le-cercle-ex-ceo-french-may.html"],
+[13,"Hong Kong","Céline Vidal","Patrimolink","13-hk-immobilier-investissement-expatriation-celine-vidal-managing-director-patrimolink.html"],
 [14,"Hong Kong","Olivier Kuziner","Ekimetrics","14-hk-data-science-ai-levee-de-fonds-olivier-kuziner-gm-apac-ekimetrics.html"],
+[15,"Hong Kong","Jérôme Carlier","La Rôtisserie","15-hk-trader-restauration-jerome-carlier-co-founder-la-rotisserie.html"],
+[16,"Hong Kong","Boris Duhamel","Baseline","16-hk-lighting-serial-intrapreneur-retail-boris-duhamel-ceo-baseline.html"],
 [17,"Chine","Jean-Baptiste Le Blan","Splio","17-chine-retail-digital-adaptation-jean-baptiste-le-blan-gm-apac-splio.html"],
 [18,"Hong Kong","Albin Lix","Digital Business Lab","18-hong-kong-albin-lix-digital-business-lab-self-made-man-reseaux-sociaux-kol.html"],
 [19,"Chine","Frédéric Guiral de Haas","Nivose 1933","19-shanghai-frederic-guiral-de-haas-nivose-1933-30-ans-de-chine-retail-re-lancer-une-marque.html"],
 [20,"Hong Kong","Diego & Delphine","OnTheList","20-hong-kong-diego-et-delphine-on-the-list-flash-sales-retail-couple-entrepreneur.html"],
 [21,"Chine","Aurélien Rigart","IT Consultis","21-shanghai-aurelien-rigart-it-consultis-agence-transformation-digitale-direct-to-consummer.html"],
 [22,"Chine / Hong Kong","David Baverez","Investisseur & essayiste","22-hk-chine-david-baverez-investisseur-essayiste-le-retour-de-la-chine-au-21eme-siecle.html"],
+[23,"Chine","Stéphane Monsallier","System in Motion","23-shanghai-stephane-monsallier-system-in-motion-tmall-et-jd-ne-sont-pas-des-plateformes-e-comme.html"],
+[24,"Chine","Olivier Dessajan","China Merchants / Colisée","24-shenzhen-olivier-dessajan-china-merchants-colisee-reconversions-jv-avec-conglomerat-maison.html"],
 [25,"Chine","Pascal Gentil","DNA Global Analytics","25-beijing-pascal-gentil-dna-global-analytics-taekwondo-reconversion-tech.html"],
+[26,"Hong Kong","Philippe Ricard","La Crêperie","26-hong-kong-philippe-ricard-la-creperie-shanghai-hong-kong-ho-chi-minh-5-restaurants.html"],
+[27,"Asie","Jacky Chang","Paris Fashion Shops","27-paris-jacky-chang-paris-fashion-shops-digitaliser-le-sentier.html"],
 [28,"Hong Kong","Arnault Castel","Kapok","28-hong-kong-arnault-castel-kapok-concept-stores-distribution-de-marques.html"],
 [29,"Japon","Pascal Gerbert-Gaillard","Bio c' Bon","29-tokyo-pascal-gerbert-gaillard-bio-c-bon-une-jv-avec-le-groupe-aeon-pour-developper-le-bio-au.html"],
+[30,"Chine","Thomas Chabrières","Castida","30-shanghai-thomas-chabrieres-castida-shanghai-en-side-car-hotels-troglodytes-a-xi-an-bar-a-vi.html"],
 [31,"Hong Kong","Sonalie Figueiras","Green Queen","31-hong-kong-sonalie-figueiras-green-queen-devenir-le-cnn-de-la-sustainability.html"],
 [32,"Asie du Sud Est","Benjamin Croc","BrioHR","32-malaisie-benjamin-croc-briohr-une-hr-tech-a-kuala-qui-integre-y-combinator.html"],
+[33,"Chine","Géraud de la Tullaye","In2Log","33-shenzhen-geraud-de-la-tullaye-in2log-logistique-et-supply-chain-reprise-du-marche-chinois.html"],
+[34,"Asie","Frédéric Benoliel","Club VIE","34-asie-frederic-benoliel-club-vie-japon-lecons-apprises-de-40-annees-de-tribulations-en-asie.html"],
+[35,"Chine","Fabien Pacory","Creativa","35-guangzhou-fabien-pacory-creativa-surfer-sur-les-opportunites-du-delta-de-la-riviere-des-perle.html"],
 [36,"Chine","Sandrine Zerbib","Full Jet","36-shanghai-sandrine-zerbib-full-jet-ouvrir-4000-magasins-adidas-rachat-full-jet-par-baozun.html"],
 [37,"Chine","Yassine Regragui","Fintech Chine","37-chine-yassine-regragui-fintech-chine-travailler-chez-alibaba-alipay-l-affaire-ant-ipo.html"],
+[38,"Hong Kong","Laurence Ouaknine","Au Cœur du Luxe","38-hong-kong-laurence-ouaknine-au-coeur-du-luxe-luxe-retail-et-formations.html"],
 [39,"Japon","Frédéric Nouel","3rdKind","39-tokyo-frederic-nouel-3rdkind-inc-jeux-video-mobile-culture-du-business-au-japon.html"],
 [41,"Japon","Taisuke Alex Odajima","EDGEof","41-tokyo-taisuke-alex-odajima-edgeof-innovation-marche-japonais-startups-interculturel.html"],
 [42,"Singapour","Thibaut Brière","Growth Marketing Studio","42-singapour-thibaut-briere-growth-marketing-studio-ecosysteme-tech-de-singapour.html"],
+[43,"Japon","Alain Soulas","LaBelleVie","43-tokyo-alain-soulas-labellevie-inc-evenementiel-flash-sales-chine-japon.html"],
+[44,"Chine","Rachel Daydou","Fabernovel","44-shanghai-rachel-daydou-fabernovel-plaisir-de-l-excellence-par-le-kungfu-startups-et-corpos.html"],
 [45,"Taiwan","Pascal Viaud","Ubik","45-taiwan-pascal-viaud-ubik-semi-conducteurs-taiwan-tscm.html"],
+[46,"Chine","Benoît Raoult","Dunho","46-shanghai-benoit-raoult-dunho-si-vous-ne-faites-pas-20x-fois-votre-ca-francais-en-chine.html"],
+[47,"Japon","Laurent Dubois","TMI Associates","47-tokyo-laurent-dubois-tmi-associates-le-japon-a-du-achete-l-innovation-pour-preserver.html"],
 [48,"Taiwan","Philippe Chiu","UnaBiz","48-taiwan-philippe-chiu-unabiz-permettre-a-l-iot-de-sortir-du-cimetiere-des-proof-of-concept.html"],
 [49,"Asie du Sud Est","Djoann Fal","GetLinks","49-bangkok-djoann-fal-getlinks-monter-getlinks-a-22-ans-en-thailande-lever-des-fonds-d-alibaba.html"],
 [50,"Taiwan","Thomas Kuiper","Gandi","50-taiwan-thomas-kuiper-gandi-no-bullshit-communication-business-development-strategy.html"],
+[51,"Chine","Bruno Bensaid","Shanghaivest","51-chine-bruno-bensaid-shanghaivest-vc-investissements-fusacq-chine-france-france-chine.html"],
+[52,"Chine","Xavier Desaulles","Club Med","52-shanghai-xavier-desaulles-club-med.html"],
 [53,"Singapour","Alice Besomi","Jungle Ventures","53-singapour-alice-besomi-jungle-venture-startup-lever-des-fonds-et-developper-l-asie-du-sud-est.html"],
 [54,"Taiwan","Keesjan Engelen","Titoma","54-taiwan-keesjan-engelen-titoma-electronics-design-manufacturing-in-asia.html"],
+[55,"Chine","Eric Tarchoune","Dragonfly Group","55-shanghai-eric-tarchoune-dragonfly-recruteur-coach-passeur-culturel-du-monde-chinois.html"],
 [56,"Hong Kong","Aurélien Joly","Unlock APAC","56-hong-kong-aurelien-joly-unlock-apac-strategie-de-distribution-consummer-electronics-en-asie.html"],
 [57,"Taiwan","Pierre-Arnaud Le Magnan","Chiru Bikes","57-taiwan-pierre-arnaud-le-magnan-chiru-bikes-ultra-endurance-velos-pour-pedaler-20h-par-jour-e.html"],
+[58,"Chine","Matthieu Rochette-Schneider","centdegrés","58-shanghai-matthieu-rochette-schneider-centdegresfas-du-made-in-china-au-created-in-china.html"],
 [59,"Singapour","Pierre Poignant","Branded","59-singapour-pierre-poignant-branded-de-ceo-de-lazada-a-branded-acquisition-de-marques-amazon.html"],
 [60,"Chine","Augustin Missoffe","HOPSCOTCH","60-shanghai-augustin-missoffe-hopscotch-la-chine-pense-en-ecosystemes-pas-en-innovation-unique.html"],
 [61,"Hong Kong","Augustin Redier","Red Asia Insurance","61-hong-kong-augustin-redier-red-asia-insurance-assurances-11-ans-entre-shanghai-et-hk.html"],
+[62,"Chine","Alexis Bonhomme","Farfetch","62-partie-1-shanghai-alexis-bonhomme-farfetch-entreprendre-revendre-intraprendre-en-chine.html"],
 [63,"Asie du Sud Est","Stephanie Desmas","White Palm Hotel","63-indonesie-stephanie-desmas-white-palm-hotel-bali-de-la-vente-de-jets-prives-a-un-hotel-a-bali.html"],
 [64,"Hong Kong","Cyrille Littler","Eastwise","64-hong-kong-cyrille-littler-eastwise-s-installer-a-hk-racheter-une-entreprise-de-sourcing.html"],
 [65,"Asie du Sud Est","Nathanael Noiraud","N-Strategy Consulting","65-malaisie-nathanael-noiraud-n-strategy-consulting-go-to-market-entreprises-tech-en-apac.html"],
+[66,"Chine","Nicolas Coster","Coster Associates","66-shanghai-nicolas-coster-coster-associates-law-firm-il-n-a-jamais-ete-aussi-facile-d-invest.html"],
 [67,"Asie du Sud Est","Soreasmey Ke Bin","Confluences","67-cambodge-soreasmey-ke-bin-confluences-etre-sur-de-soi-mais-savoir-adapter-son-offre.html"],
 [68,"Singapour","Daniel Rouquette","Villa Finders","68-singapore-daniel-rouquette-villa-finders-monter-le-airbnb-de-la-location-de-villas-en-apac.html"],
 [70,"Singapour","Martin Pasquier","Consultant","70-singapour-martin-pasquier-consultant-scale-ups-comment-attaquer-le-marche-apac.html"],
